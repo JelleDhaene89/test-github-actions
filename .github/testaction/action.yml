@@ -2,10 +2,13 @@ runs:
   using: "composite"
   steps:
     - name: Setup test action
+      shell: bash
       run: echo "setup test action"
 
     - name: Install something
+      shell: bash
       run: echo "install something"
 
     - name: Finish up the test action
+      shell: bash
       run: echo "finishing up"
