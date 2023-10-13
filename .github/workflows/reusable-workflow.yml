@@ -1,0 +1,28 @@
+name: Reusable workflow
+
+on:
+  workflow_call
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref_name }}
+
+    - name: test 1
+      run: echo "do test 1"
+
+    - name: test 2
+      run: echo "do test 2"
+
+    - name: test 3
+      run: echo "do test 3"
+
+    - name: test 4
+      run: echo "do test 4"
+
+    - name: finish up
+      run: echo "finishing up testing - uploading report"
