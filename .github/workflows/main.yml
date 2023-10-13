@@ -21,4 +21,5 @@ jobs:
     uses: ./.github/workflows/build.yml
 
   testing:
+    if: github.event_name == 'pull_request'
     uses: ./.github/workflows/integration-tests.yml
