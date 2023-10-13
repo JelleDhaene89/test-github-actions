@@ -9,8 +9,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-      with:
-        ref: ${{ github.ref_name }}
 
     - name: test 1
       run: echo "do test 1"
