@@ -2,13 +2,10 @@ runs:
   using: "composite"
   steps:
     - name: Setup test action
-      shell: powershell
       run: echo "setup test action"
 
     - name: Install something
-      shell: powershell
       run: echo "install something"
 
     - name: Finish up the test action
-      shell: powershell
       run: echo "finishing up"

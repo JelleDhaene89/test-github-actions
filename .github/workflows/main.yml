@@ -8,11 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Start Setup
-      shell: powershell
       run: echo "start setup"
 
     - name: Finish Setup
-      shell: powershell
       run: echo "finish setup"
 
   build:
@@ -20,11 +18,9 @@ jobs:
     needs: setup
     steps:
     - name: Start Build
-      shell: powershell
       run: echo "build started"
 
     - name: Finish Build
-      shell: powershell
       run: echo "build finished"
 
   testing:
