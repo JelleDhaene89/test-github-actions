@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  workflow_call
+
+jobs:
+  build job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref_name }}
+
+    - name: start build
+      run: echo "start build"
+
+    - name: finish build
+      run: echo "finish build"
+
+    - name: finish up
+      run: echo "finishing up building - uploading build"

@@ -4,7 +4,7 @@ on:
   workflow_call
 
 jobs:
-  testing:
+  integration testing:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -26,3 +26,4 @@ jobs:
 
     - name: finish up
       run: echo "finishing up testing - uploading report"
+
