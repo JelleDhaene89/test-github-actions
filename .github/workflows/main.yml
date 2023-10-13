@@ -1,4 +1,4 @@
-name: Main workflow
+name: Main
 
 on:
   push:
@@ -21,4 +21,4 @@ jobs:
     uses: ./.github/workflows/build.yml
 
   testing:
-    uses: ./.github/workflows/reusable-workflow.yml
+    uses: ./.github/workflows/integration-tests.yml

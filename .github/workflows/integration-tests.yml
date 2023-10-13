@@ -1,10 +1,10 @@
-name: Reusable workflow
+name: IntegrationTesting
 
 on:
   workflow_call
 
 jobs:
-  integration testing:
+  integration_testing:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
