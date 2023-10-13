@@ -18,8 +18,13 @@ jobs:
       run: echo "finish setup"
 
   build:
+    needs: setup
     uses: ./.github/workflows/build.yml
 
   testing:
-    if: github.event_name == 'pull_request'
-    uses: ./.github/workflows/integration-tests.yml
+    needs: build
+
+    steps:
+     - name: Integration tests
+       if: github.event_name == 'pull_request'
+       uses: ./.github/workflows/integration-tests.yml
