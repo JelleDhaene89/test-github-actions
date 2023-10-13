@@ -1,0 +1,41 @@
+name: Main workflow
+
+on:
+  push
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Start Setup
+      shell: powershell
+      run: echo "start setup"
+
+    - name: Finish Setup
+      shell: powershell
+      run: echo "finish setup"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+    - name: Start Build
+      shell: powershell
+      run: echo "build started"
+
+    - name: Finish Build
+      shell: powershell
+      run: echo "build finished"
+
+  testing:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref_name }}
+
+    - name: Setup
+      uses: ./.github/testaction
+
